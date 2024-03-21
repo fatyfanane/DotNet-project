@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<Cinema>
 
 @{
-    ViewData["Title"] = "List of Cinemas";
+    ViewData["Title"] = "List of Stores";
 }
-
+<link rel="stylesheet" href="~/css/site.css" />
 <div class="row">
     <div class="col-md-8 offset-md-2">
 
         <table class="table">
             <thead>
-                <tr class="text-center">
-                    <th>@Html.DisplayNameFor(model => model.Logo)</th>
-                    <th>@Html.DisplayNameFor(model => model.Name)</th>
-                    <th>@Html.DisplayNameFor(model => model.Description)</th>
+                <tr class="text-center" >
+                    <th>Store Logo</th>
+                    <th>Store Name</th>
+                    <th>Store Description</th>
                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                     {
                         <th>Actions</th>
